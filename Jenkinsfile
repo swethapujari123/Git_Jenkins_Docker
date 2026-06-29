@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy app1') {
             steps {
                 sh '''
-                docker cp app1.war $CONTAINER1:/usr/local/tomcat/webapps/
+                docker cp app1.html $CONTAINER1:/usr/local/tomcat/webapps/
                 '''
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy app2') {
             steps {
                 sh '''
-                docker cp app2.war $CONTAINER2:/usr/local/tomcat/webapps/
+                docker cp app2.html $CONTAINER2:/usr/local/tomcat/webapps/
                 '''
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy app3') {
             steps {
                 sh '''
-                docker cp app3.war $CONTAINER3:/usr/local/tomcat/webapps/
+                docker cp app3.html $CONTAINER3:/usr/local/tomcat/webapps/
                 '''
             }
         }
